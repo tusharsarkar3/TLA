@@ -60,26 +60,29 @@ if __name__ == "__main__":
         if os.path.isdir(p) == False:
             os.mkdir(p)
         for file in os.listdir("TLA\Datasets"):
-            path = os.path.join("TLA\Datasets", file)
-            df = pd.read_csv(path)
-            train_doc, test_doc, train_labels, test_labels = train_test_split(df['content'].values,
-                                                                              df['sentiment'].values, test_size=0.33,
-                                                                              random_state=42)
+            try:
+                path = os.path.join("TLA\Datasets", file)
+                df = pd.read_csv(path)
+                train_doc, test_doc, train_labels, test_labels = train_test_split(df['content'].values,
+                                                                                  df['sentiment'].values, test_size=0.33,
+                                                                                  random_state=42)
 
-            vectorizer = CountVectorizer(ngram_range=(1, 4), analyzer='char', max_features=25000)
-            vector = vectorizer.fit_transform(train_doc)
-            train_df = pd.DataFrame(vector.toarray())
+                vectorizer = CountVectorizer(ngram_range=(1, 4), analyzer='char', max_features=25000)
+                vector = vectorizer.fit_transform(train_doc)
+                train_df = pd.DataFrame(vector.toarray())
 
-            vector_test = vectorizer.transform(test_doc)
-            test_df = pd.DataFrame(vector_test.toarray())
+                vector_test = vectorizer.transform(test_doc)
+                test_df = pd.DataFrame(vector_test.toarray())
 
-            rf = RandomForestClassifier()
-            rf.fit(train_df.values, train_labels)
+                rf = RandomForestClassifier()
+                rf.fit(train_df.values, train_labels)
 
-            print(rf.score(test_df, test_labels))
+                print(rf.score(test_df, test_labels))
 
-            file = "TLA\Analysis\saved_vec\{}.pkl".format(path[-6:-4])
-            pickle.dump(vectorizer, open(file, "wb"))
+                file = "TLA\Analysis\saved_vec\{}.pkl".format(path[-6:-4])
+                pickle.dump(vectorizer, open(file, "wb"))
 
-            filename = "TLA\Analysis\saved_rf\{}.pkl".format(path[-6:-4])
-            pickle.dump(rf, open(filename, "wb"))
+                filename = "TLA\Analysis\saved_rf\{}.pkl".format(path[-6:-4])
+                pickle.dump(rf, open(filename, "wb"))
+            except:
+                pass
