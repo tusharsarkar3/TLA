@@ -242,6 +242,7 @@ The --data flag requires the path to your training dataset.
  
  
 The outputs is the language your string was typed in.
+ </details>
  
 
 
