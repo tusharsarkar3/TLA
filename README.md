@@ -9,38 +9,17 @@ provided by TLA will also go a long way in understanding the sentiments of
 different linguistic communities and come up with new and innovative solutions
 for their problems based on the analysis.
 List of languages our library provides support for are  listed as follows:<br>
-1>English
-<br>
-2>Russian
-<br>
-3>Romainain
-<br>
-4>Persian
-<br>
-5>Spanish
-<br>
-6>Hindi
-<br>
-7>Chinese
-<br>
-8>French
-<br>
-9>Portuguese
-<br>
-10>Indonesian
-<br>
-11>Urdu
-<br>
-12>Turkish
-<br>
-13>Japanese
-<br>
-14>Dutch
-<br>
-15>Thai
-<br>
-16>Swedish
-<br>
+
+| Language | Code   | Language | Code |
+| ----------------  | ---------------- | ---------------- | ---------------- |
+| English |   en    | Hindi    |   hi  |
+| Swedish |   sv    | Thai     |   th  |
+| Dutch   |   nl   | Japanese |   ja  |
+ | Turkish  |   tr  | Urdu     |  ur   |
+ | Indonesian | id   |Portuguese | pt  |
+ | French    | fr   | Chinese |  zn-ch |
+ | Spanish  | es    | Persian |   fa   |
+ | Romainain | ro  | Russian | ru |
 
 
 
@@ -185,23 +164,6 @@ Lang flag is used to input the language of the dataset that is required and
 process flag shows where pre-processing should be done before returning the data.
 Give the following codes in the lang flag wrt the required language:
 
-| Language | Code   | Language | Code |
-| ----------------  | ---------------- | ---------------- | ---------------- |
-| English |   en    | Hindi    |   hi  |
-| ----------------  | ---------------- | ---------------- | ---------------- |
-| Swedish |   sv    | Thai     |   th  |
-| ----------------  | ---------------- | ---------------- | ---------------- |
- | Dutch   |   nl   | Japanese |   ja  |
- | ---------------- | ---------------- | ---------------- | ---------------- |
- | Turkish  |   tr  | Urdu     |  ur   |
- | ---------------- | ---------------- | ---------------- | ---------------- |
- | Indonesian | id   |Portuguese | pt  |
- | ---------------- | ---------------- | ---------------- | ---------------- |
- | French    | fr   | Chinese |  zn-ch |
- | ---------------- | ---------------- | ---------------- | ---------------- |
- | Spanish  | es    | Persian |   fa   |
- | ---------------- | ---------------- | ---------------- | ---------------- |
- | Romainain | ro  | Russian | ru |
 
 
 
