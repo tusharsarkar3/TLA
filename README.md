@@ -78,18 +78,23 @@ Lang flag is used to input the language of the dataset that is required and
 process flag shows where pre-processing should be done before returning the data.
 Give the following codes in the lang flag wrt the required language:
 
-| Language | Code  | Language | Code |
-| ---------------- | ---------------- | ---------------- | ---------------- |
-| English |   en   | Hindi    |   hi |
-
-| Swedish |   sv   | Thai     |   th |
- 
-| Dutch   |   nl   | Japanese |   ja |
-| Breast Cancer  | <b>96.49</b>  | 96.47 |
-| Wine  | <b>97.22</b>  | <b>97.22</b> |
-| Diabetes  | <b>78.78</b>  | 77.48 |
-| Titanic  | 79.85  | <b>80.5</b> |
-| German Credit  | 71.33  | <b>77.66</b> |
+| Language | Code   | Language | Code |
+| ----------------  | ---------------- | ---------------- | ---------------- |
+| English |   en    | Hindi    |   hi  |
+| ----------------  | ---------------- | ---------------- | ---------------- |
+| Swedish |   sv    | Thai     |   th  |
+| ----------------  | ---------------- | ---------------- | ---------------- |
+ | Dutch   |   nl   | Japanese |   ja  |
+ | ---------------- | ---------------- | ---------------- | ---------------- |
+ | Turkish  |   tr  | Urdu     |  ur   |
+ | ---------------- | ---------------- | ---------------- | ---------------- |
+ | Indonesian | id   |Portuguese | pt  |
+ | ---------------- | ---------------- | ---------------- | ---------------- |
+ | French    | fr   | Chinese |  zn-ch |
+ | ---------------- | ---------------- | ---------------- | ---------------- |
+ | Spanish  | es    | Persian |   fa   |
+ | ---------------- | ---------------- | ---------------- | ---------------- |
+ | Romainain | ro  | Russian | ru |
 
 </details>
 
