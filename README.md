@@ -120,8 +120,10 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  <summary> Training </summary>
  To train a random forest classifier for the purpose of sentiment analysis run the following command in your terminal.
+ 
  ```  
  cd Analysis
+ 
  ```
  then 
  
@@ -135,6 +137,61 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  The output is a file with the a .pkl file extention saved in the folder at location "TLA\Analysis\saved_rf\{}.pkl"
  The output for vectorization of is stored in a .pkl file in the directory  "TLA\Analysis\saved_vec\{}.pkl"
+ 
+ <summary> Get Sentiment </summary>
+ 
+ To get the sentiment of any string use the following code.
+ 
+ In your terminal type
+ 
+ ```
+ cd Analysis
+ 
+ ```
+ then in your terminal type
+ 
+ ```
+ python get_sentiment.py --prediction "Your string for prediction to be made upon" --lang "en"
+ 
+ 
+ ```
+ 
+ here the --prediction flag collects the string for which you want to get the sentiment for.
+ the --lang represents the language code representing the language you typed your string in.
+ 
+ The output is a sentiment which is either positive or negative depending on your string.
+ 
+ 
+ <summary>Statistics</summary>
+ 
+ To get a comprehensive statistic on sentiment of datasets run the following command.
+ 
+ In your terminal type
+ 
+ ```
+ 
+ cd Analysis
+ 
+ ```
+ 
+ then
+ 
+ ```
+ 
+ python analyse.py 
+ 
+ ---
+ 
+ This will give you an output of a table1.csv file at the location 'TLA\Analysis\analysis\table1.csv' comprising of statistics relating to the
+ percentage of positive or negative tweets for a given language dataset.
+ 
+ It will also give a table2.csv file at 'TLA\Analysis\analysis\table2.csv' comprising of statistics for all languages combined.
+ 
+ 
+ 
+ 
+ 
+ 
  
  
 
