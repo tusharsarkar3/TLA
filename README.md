@@ -188,31 +188,61 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  It will also give a table2.csv file at 'TLA\Analysis\analysis\table2.csv' comprising of statistics for all languages combined.
  
  
- 
- 
- 
- 
- 
- 
+ </details>  
 
-</details>  
 
-<details open>
-<summary>Inference </summary>
 
-```bash
-$ python detect.py --weights 'path to the best set of weights' --source 0  # webcam       
-                                                                        file.jpg  # image 
-                                                                        file.mp4  # video
-                                                                        path/  # directory
-                                                                        path/*.jpg  # glob
-                                                                        'https://youtu.be/NUsoVlDFqZg'  # YouTube video
-                                                                        'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
-```
- The results will be stored in a new directory named run which will be on the same level as the root directory.
+
+
+<details>
+<summary>Language Classification </summary>
+ <summary>Training</summary>
+ To train a model for language classfication on a given dataset run the following commands.
  
- Check out <a href="https://github.com/ultralytics/yolov5">YOLOv5</a> for more information.
-</details>
+ In your terminal run
+ 
+ ```
+cd Lang_Classify
+ 
+ ```
+ then run
+ ```
+ 
+ python train.py --data "path for your dataset" --model "path for the model architecture" --epochs 4
+ 
+ 
+ ```
+ 
+The --data flag requires the path to your training dataset.
+ 
+ The --model flag requires the path to the model you want to implement
+ 
+ The --epoch flag represents the epochs you want to train your model for.
+ 
+ The output is a file with a .pt extention named saved_wieghts_full.pt where your trained wieghst are stored.
+ 
+ 
+ <summary>Prediction</summary>
+ To make prediction on any given string Us ethe following code.
+ 
+ In your terminal type
+ 
+ ```
+ cd Lang_Classify
+ 
+ ```
+ then run the code
+ 
+ ```
+ python predict.py --predict "Text for language to predicted" --weights " Path for the stored wieghts of your model "
+ 
+ The --predict flag requires the string you want to get the language for.
+ 
+ The --wieghts flag is the path for the stored wieghts you want to run your model on to make predictions.
+ 
+ 
+The outputs is the language your string was typed in.
+ 
 
 
 
