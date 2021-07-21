@@ -336,10 +336,13 @@ Performance of TLA ( Loss vs epochs)
 
 
 
+
+
 ---
  #### Features to be added :
 - Access to more languag
-- Addition of some other types of layers
+- Creating GUI based system for baetter accesibility
+- Improving performance of the baseline model
 
 ---
 
