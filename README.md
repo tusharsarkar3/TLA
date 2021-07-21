@@ -118,9 +118,24 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
 <details>
 <summary>Analysis</summary>
  
- <summary> Training 
- To train a random forest classifier for the purpose of sentiment analysis run the following command.
- </summary>
+ <summary> Training </summary>
+ To train a random forest classifier for the purpose of sentiment analysis run the following command in your terminal.
+ ```  
+ cd Analysis
+ ```
+ then 
+ 
+ ```
+ python train.rf --path "path to your datafile" --train_all_datasets False
+ 
+ ```
+ 
+ here the --path flag represents the path to the required dataset you want to train the Random Forest Classifier on
+ the --train_all_datasets flag is a boolean which can be used to train the model on multiple datasets at once.
+ 
+ The output is a file with the a .pkl file extention saved in the folder at location "TLA\Analysis\saved_rf\{}.pkl"
+ The output for vectorization of is stored in a .pkl file in the directory  "TLA\Analysis\saved_vec\{}.pkl"
+ 
  
 
 </details>  
