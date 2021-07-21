@@ -194,6 +194,7 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
 
 
 
+
 <details>
 <summary>Language Classification </summary>
  <summary>Training</summary>
@@ -206,6 +207,7 @@ cd Lang_Classify
  
  ```
  then run
+ 
  ```
  
  python train.py --data "path for your dataset" --model "path for the model architecture" --epochs 4
@@ -235,6 +237,8 @@ The --data flag requires the path to your training dataset.
  
  ```
  python predict.py --predict "Text for language to predicted" --weights " Path for the stored wieghts of your model "
+ 
+ ```
  
  The --predict flag requires the string you want to get the language for.
  
