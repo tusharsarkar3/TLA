@@ -332,6 +332,8 @@ The outputs is the language your string was typed in.
 
 ![img](ss/performance.png)
 
+Performance of TLA ( Loss vs epochs)
+
 
 ### Reference
 If you make use of this software for your work, we would appreciate it if you would cite us:
