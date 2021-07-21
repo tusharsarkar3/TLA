@@ -333,18 +333,7 @@ The outputs is the language your string was typed in.
 ![img](ss/performance.png)
 
 
-### Reference
-If you make use of this software for your work, we would appreciate it if you would cite us:
-```
-@misc{sarkar2021xbnet,
-      title={XBNet : An Extremely Boosted Neural Network}, 
-      author={Tushar Sarkar},
-      year={2021},
-      eprint={2106.05239},
-      archivePrefix={arXiv},
-      primaryClass={cs.LG}
-}
-```
+
 ---
  #### Features to be added :
 - Access to more languag
