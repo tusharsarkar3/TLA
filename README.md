@@ -1,15 +1,13 @@
 # TLA - Twitter Linguistic Analysis
-## Analysis tool to aid NLP projects.
+## Tool for linguistic analysis of communities 
 
-
-
-
-TLA is a novel library built to provide functionalities and dataset to ease the procedure for processing text bodies.
-
-TLA provides support for multiple languages and focusses on user interpretability and ease.
-
-TLA implements several novel machine learning algorithms to proide the best results.
-
+TLA is built using PyTorch, Transformers and several other State-of-the-Art machine learning
+techniques and it aims to expedite and structure the cumbersome process of collecting, labeling, and analyzing data
+from Twitter for a corpus of languages while providing detailed labeled datasets
+for all the languages. The analysis
+provided by TLA will also go a long way in understanding the sentiments of
+different linguistic communities and come up with new and innovative solutions
+for their problems based on the analysis.
 List of languages our library provides support for are  listed as follows:<br>
 1>English
 <br>
@@ -48,25 +46,93 @@ List of languages our library provides support for are  listed as follows:<br>
 
 ## Features
 
-- Provides 16 labeled Datasets for diffret languages for analysis.
-- Implements Bert based architectire to identify languages.
-- Provides Functionalities to Extract and process tweets from twitter.
+- Provides 16 labeled Datasets for different languages for analysis.
+- Implements Bert based architecture to identify languages.
+- Provides Functionalities to Extract,process and label tweets from twitter.
 - Provides a Random Forest classifier to implement sentiment analysis on any string.
 
 ---
 
 
----
 ### Installation :
 ```
-pip install 
+pip install --upgrade https://github.com/tusharsarkar3/TLA.git
 ```
 ---
 
-### Example for using
+## <div align="center">Overview</div>
+
+<details>
+<summary>Extract data</summary>
+Navigate to the required directory
+
 ```
+cd Data
+```
+
+Run the following command:
+```
+python get_data.py --lang en --process True
+```
+Lang flag is used to input the language of the dataset that is required and
+process flag shows where pre-processing should be done before returning the data.
+Give the following codes in the lang flag wrt the required language:
+
+| Language | Code  | Language | Code |
+| ---------------- | ---------------- | ---------------- | ---------------- |
+| Iris  | <b>100</b>  | 97.7 |
+| Breast Cancer  | <b>96.49</b>  | 96.47 |
+| Wine  | <b>97.22</b>  | <b>97.22</b> |
+| Diabetes  | <b>78.78</b>  | 77.48 |
+| Titanic  | 79.85  | <b>80.5</b> |
+| German Credit  | 71.33  | <b>77.66</b> |
+
+</details>
+
+<details>
+<summary>Training</summary>
+ 
+Run commands below to reproduce results on [Drone Dataset](https://www.kaggle.com/dasmehdixtr/drone-dataset-uav) dataset..
 ```bash
-$ python  get_data_for_lang --lang 'en'
+$ python train.py --img 640 --batch 16 --epochs 15 --data coco128.yaml --weights yolov5s.pt
+
+```
+
+ Check out <a href="https://github.com/ultralytics/yolov5">YOLOv5</a> for more information.
+</details>  
+
+<details open>
+<summary>Inference </summary>
+
+```bash
+$ python detect.py --weights 'path to the best set of weights' --source 0  # webcam       
+                                                                        file.jpg  # image 
+                                                                        file.mp4  # video
+                                                                        path/  # directory
+                                                                        path/*.jpg  # glob
+                                                                        'https://youtu.be/NUsoVlDFqZg'  # YouTube video
+                                                                        'rtsp://example.com/media.mp4'  # RTSP, RTMP, HTTP stream
+```
+ The results will be stored in a new directory named run which will be on the same level as the root directory.
+ 
+ Check out <a href="https://github.com/ultralytics/yolov5">YOLOv5</a> for more information.
+</details>
+
+
+
+---
+### Results:
+
+![img](exp27/test_batch0_pred.jpg)
+![img](exp27/results.png)
+![img](exp27/P_curve.png) 
+![img](exp27/R_curve.png)
+![img](exp27/PR_curve.png)
+
+---
+
+<h3 align="center"><b>Developed with :heart: by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a>
+
 
 
                                                          
@@ -100,4 +166,4 @@ If you make use of this software for your work, we would appreciate it if you wo
 
 ---
 
-<h3 align="center"><b>Developed with :heart: by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a>
+<h3 align="center"><b>Developed with :heart: by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a> and <a href="https://github.com/nishant42491">Nishant Rajadhyaksha</a>
