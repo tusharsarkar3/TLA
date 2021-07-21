@@ -180,7 +180,7 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  python analyse.py 
  
- ---
+ ```
  
  This will give you an output of a table1.csv file at the location 'TLA\Analysis\analysis\table1.csv' comprising of statistics relating to the
  percentage of positive or negative tweets for a given language dataset.
