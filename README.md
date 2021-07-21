@@ -81,9 +81,9 @@ Give the following codes in the lang flag wrt the required language:
 | Language | Code  | Language | Code |
 | ---------------- | ---------------- | ---------------- | ---------------- |
 | English |   en   | Hindi    |   hi |
-| ---------------- | ---------------- | ---------------- | ---------------- |
+
 | Swedish |   sv   | Thai     |   th |
- | ---------------- | ---------------- | ---------------- | ---------------- |
+ 
 | Dutch   |   nl   | Japanese |   ja |
 | Breast Cancer  | <b>96.49</b>  | 96.47 |
 | Wine  | <b>97.22</b>  | <b>97.22</b> |
