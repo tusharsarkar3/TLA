@@ -1,6 +1,10 @@
 # TLA - Twitter Linguistic Analysis
 ## Tool for linguistic analysis of communities 
 
+
+[![](https://img.shields.io/badge/Made_with-PyTorch-res?style=for-the-badge&logo=pytorch)](https://pytorch.org/ "PyTorch")
+
+
 TLA is built using PyTorch, Transformers and several other State-of-the-Art machine learning
 techniques and it aims to expedite and structure the cumbersome process of collecting, labeling, and analyzing data
 from Twitter for a corpus of languages while providing detailed labeled datasets
@@ -326,7 +330,7 @@ The outputs is the language your string was typed in.
 ---
 ### Results:
 
-![img](ss\performance.png)
+![img](ss/performance.png)
 
 
 ### Reference
