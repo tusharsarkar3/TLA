@@ -118,13 +118,11 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
 <details>
 <summary>Analysis</summary>
  
-Run commands below to reproduce results on [Drone Dataset](https://www.kaggle.com/dasmehdixtr/drone-dataset-uav) dataset..
-```bash
-$ python train.py --img 640 --batch 16 --epochs 15 --data coco128.yaml --weights yolov5s.pt
+ <summary> Training 
+ To train a random forest classifier for the purpose of sentiment analysis run the following command.
+ </summary>
+ 
 
-```
-
- Check out <a href="https://github.com/ultralytics/yolov5">YOLOv5</a> for more information.
 </details>  
 
 <details open>
