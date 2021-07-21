@@ -38,9 +38,108 @@ List of languages our library provides support for are  listed as follows:<br>
 pip install --upgrade https://github.com/tusharsarkar3/TLA.git
 ```
 ---
+## <div align="center">Overview </div>
 
-## <div align="center">Overview</div>
+<details>
+<summary>Extract data</summary>
 
+
+```
+from TLA.Data.get_data import store_data
+store_data('en',False)
+```
+This will extract and store the unlabeled data in a new directory inside data named 
+datasets.
+</details>
+
+<details>
+<summary>Label data</summary>
+
+
+```
+from TLA.Datasets.get_lang_data import language_data
+df = language_data('en')
+print(df)
+```
+This will print the labeled data that we have already collected.
+</details>
+
+<details>
+<summary>Classify languages</summary>
+
+<details>
+<summary>Training </summary>
+
+Training can be done in the following way:
+
+```
+from TLA.Lang_Classify.train import train_lang
+train_lang(path_to_dataset,epochs)
+```
+</details>
+
+<details>
+<summary>Prediction </summary>
+
+Inference is done in the following way:
+
+```
+from TLA.Lang_Classify.predict import predict
+model = get_model(path_to_weights)
+preds = predict(dataframe_to_be_used,model)
+```
+</details>
+
+
+</details>
+
+
+<details>
+<summary>Analyse</summary>
+
+<details>
+<summary>Training </summary>
+
+Training can be done in the following way:
+
+```
+from TLA.Analyse.train_rf import train_rf
+train_rf(path_to_dataset)
+```
+This will store all the vectorizers and models in a seperate directory named
+saved_rf and saved_vec and they are present inside Analysis directory.
+Further instructions for training multiple languages is given in the next section which 
+shows how to run the commands using CLI
+
+</details>
+
+<details>
+<summary>Final Analysis </summary>
+
+Analysis is done in the following way:
+
+```
+from TLA.Analysis.analyse import analyse_data 
+analyse_data(path_to_weights)
+```
+
+This will store the final analysis as .csv inside a new directory named
+analysis.
+
+</details>
+
+
+</details>
+
+
+## <div align="center">Overview with Git</div>
+<details> 
+<summary>Installation another method</summary>
+
+```
+git clone https://github.com/tusharsarkar3/TLA.git
+```
+</details>
 <details>
 <summary>Extract data</summary>
 Navigate to the required directory
@@ -78,9 +177,7 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  In your terminal use code 
  
  ```
- 
  cd Data
- 
  ```
  
  then run the command in python
@@ -89,10 +186,6 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  from TLA.Data import Pre_Process_Tweets
  
  df=Pre_Process_Tweets.pre_process_tweet(df)
- 
- 
- 
- 
  ```
  
  Here the function pre_process_tweet takes an input as a dataframe of tweets and returns an output of a dataframe with the list of preprocessed words
@@ -114,13 +207,11 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  ```  
  cd Analysis
- 
  ```
  then 
  
  ```
  python train.rf --path "path to your datafile" --train_all_datasets False
- 
  ```
  
  here the --path flag represents the path to the required dataset you want to train the Random Forest Classifier on
@@ -137,14 +228,11 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  ```
  cd Analysis
- 
  ```
  then in your terminal type
  
  ```
  python get_sentiment.py --prediction "Your string for prediction to be made upon" --lang "en"
- 
- 
  ```
  
  here the --prediction flag collects the string for which you want to get the sentiment for.
@@ -160,17 +248,13 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  In your terminal type
  
  ```
- 
  cd Analysis
- 
  ```
  
  then
  
  ```
- 
  python analyse.py 
- 
  ```
  
  This will give you an output of a table1.csv file at the location 'TLA\Analysis\analysis\table1.csv' comprising of statistics relating to the
@@ -195,15 +279,11 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
  
  ```
 cd Lang_Classify
- 
  ```
  then run
  
  ```
- 
- python train.py --data "path for your dataset" --model "path for the model architecture" --epochs 4
- 
- 
+ python train.py --data "path for your dataset" --model "path to weights if pretrained" --epochs 4
  ```
  
 The --data flag requires the path to your training dataset.
@@ -222,13 +302,11 @@ The --data flag requires the path to your training dataset.
  
  ```
  cd Lang_Classify
- 
  ```
  then run the code
  
  ```
- python predict.py --predict "Text for language to predicted" --weights " Path for the stored wieghts of your model "
- 
+ python predict.py --predict "Text/DataFrame for language to predicted" --weights " Path for the stored weights of your model " 
  ```
  
  The --predict flag requires the string you want to get the language for.
@@ -248,29 +326,8 @@ The outputs is the language your string was typed in.
 ---
 ### Results:
 
-![img](exp27/test_batch0_pred.jpg)
-![img](exp27/results.png)
-![img](exp27/P_curve.png) 
-![img](exp27/R_curve.png)
-![img](exp27/PR_curve.png)
+![img](ss\performance.png)
 
----
-
-<h3 align="center"><b>Developed with :heart: by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a>
-
-
-
-                                                         
-                                          
-```
-The output will be a  
-```
----
-### Output images :
-
-![img](screenshots/Results_metrics.png)  
-![img](screenshots/results_graph.png)
----
 
 ### Reference
 If you make use of this software for your work, we would appreciate it if you would cite us:
@@ -286,9 +343,9 @@ If you make use of this software for your work, we would appreciate it if you wo
 ```
 ---
  #### Features to be added :
-- Metrics for different requirements
+- Access to more languag
 - Addition of some other types of layers
 
 ---
 
-<h3 align="center"><b>Developed with :heart: by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a> and <a href="https://github.com/nishant42491">Nishant Rajadhyaksha</a>
+<h3 align="center"><b>Developed by <a href="https://github.com/tusharsarkar3">Tushar Sarkar</a> and <a href="https://github.com/nishant42491">Nishant Rajadhyaksha</a>

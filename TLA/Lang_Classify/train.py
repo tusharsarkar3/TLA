@@ -140,4 +140,4 @@ if __name__ == "__main__":
     my_parser.add_argument('--models', action='store', type=str)
     my_parser.add_argument('--epochs', action='store', type=int)
     args = my_parser.parse_args()
-    train_lang(args.data,args.models)
+    train_lang(args.data,args.epochs,args.models)
