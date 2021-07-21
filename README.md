@@ -116,7 +116,7 @@ In the phrase get_data_en, en can be sunstituted by the desired language code to
 
 
 <details>
-<summary>Training</summary>
+<summary>Analysis</summary>
  
 Run commands below to reproduce results on [Drone Dataset](https://www.kaggle.com/dasmehdixtr/drone-dataset-uav) dataset..
 ```bash
