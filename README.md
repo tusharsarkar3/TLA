@@ -334,6 +334,29 @@ The outputs is the language your string was typed in.
 
 Performance of TLA ( Loss vs epochs)
 
+ 
+ 
+ 
+ |Language | Total tweets | Positive Tweets Percentage | Negative Tweets Percentage |
+ | ----------------  | ---------------- | ---------------- | ---------------- |
+ |English | 500 | 66.8 | 33.2 |
+ |Spanish | 500 |  61.4 | 38.6 |
+ |Persian  | 50 | 52 | 48 |  
+ |French | 500 | 53 | 47 | 
+ |Hindi | 500 | 62 | 38 | 
+ |Indonesian | 500 | 63.4 | 36.6|
+ |Japanese | 500 | 85.6 |  14.4 |  
+ |Dutch | 500 | 84.2 | 15.8  |
+ |Portuguese|  500 |  61.2 | 38.8| 
+ |Romainain|  457 | 85.55 |  14.44| 
+ |Russian|  213 | 62.91 | 37.08 |
+ |Swedish|  420 | 80.23 | 19.76 |
+ |Thai|  424 | 71.46 | 28.53 |
+ |Turkish|  500 | 67.8 | 32.2 | 
+ |Urdu| 42 | 69.04 |  30.95 |
+ |Chinese| 500 | 80.6 | 19.4 | 
+ 
+
 
 
 
