@@ -4,13 +4,13 @@ with open("README.md", "r") as fh:
 	long_description = fh.read()
 
 setuptools.setup(
-	name="TLA",
+	name="TLAF",
 
-	version="0.1",
+	version="1.0",
 
-	author="TusharSarkar , Nishant Rajadhyaksha",
+	author="Tushar Sarkar , Nishant Rajadhyaksha",
 
-	author_email="tushar.sarkar@somaiya.edu",
+	author_email="tushar.sarkar@somaiya.edu, n.rajadhyaksha@somaiya.edu",
 
 	# #Small Description about module
 	description="TLA is built using PyTorch, Transformers and several other State-of-the-Art machine learning techniques and it aims to expedite and structure the cumbersome process of collecting, labeling, and analyzing data from Twitter for a corpus of languages while providing detailed labeled datasets for all the languages.",
@@ -18,21 +18,12 @@ setuptools.setup(
 	long_description=long_description,
 	long_description_content_type="text/markdown",
 
-	url="https://github.com/tusharsarkar3/",
+	url="https://github.com/tusharsarkar3/TLA",
 	packages=setuptools.find_packages(),
-
-    package_data={"texts": ["path/static/*.txt"]},
     include_package_data=True,
 
 
-		 install_requires=[
-		"sklearn",
-		"pandas",
-		"matplotlib",
-		 "torch",
-	    "numpy",
-        "xgboost"
-	],
+		 install_requires= list(open("requirements.txt","r").read().splitlines()),
 
 
 	license="MIT",
