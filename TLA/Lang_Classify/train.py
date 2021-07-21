@@ -16,7 +16,7 @@ import os
 import pickle
 import matplotlib.pyplot as plt
 
-def train_lang(path,weights,epochs):
+def train_lang(path,epochs,weights=None):
     directory = "models"
     parent_dir = "TLA\Lang_Classify"
     p = os.path.join(parent_dir, directory)
@@ -120,6 +120,7 @@ def train_lang(path,weights,epochs):
         print(f'\nTraining Loss: {train_loss:.3f}')
         print(f'Validation Loss: {valid_loss:.3f}')
 
+    import matplotlib.pyplot as plt
     figure, axis = plt.subplots(1)
     figure.suptitle('Performance of TLA ')
 
@@ -127,10 +128,11 @@ def train_lang(path,weights,epochs):
     axis.plot(valid_losses, label="Testing Loss")
     axis.set_xlabel('Epochs')
     axis.set_ylabel('Loss')
-    axis.set_title("TLA Loss")
     axis.legend()
 
+    plt.savefig('performance.png')
     plt.show()
+
 
 if __name__ == "__main__":
     my_parser = argparse.ArgumentParser()

@@ -60,10 +60,117 @@ pip install --upgrade https://github.com/tusharsarkar3/TLA.git
 ```
 ---
 
-## <div align="center">Overview</div>
+## <div align="center">Overview </div>
 
 <details>
 <summary>Extract data</summary>
+
+
+```
+from TLA.Data.get_data import store_data
+
+store_data('en',False)
+```
+This will extract and store the unlabeled data in a new directory inside data named 
+datasets.
+</details>
+
+<details>
+<summary>Label data</summary>
+
+
+```
+from TLA.Datasets.get_lang_data import language_data
+
+df = language_data('en')
+print(df)
+```
+This will print the labeled data that we have already collected.
+</details>
+
+<details>
+<summary>Classify languages</summary>
+
+<details>
+<summary>Training </summary>
+
+Training can be done in the following way:
+
+```
+from TLA.Lang_Classify.train import train_lang
+
+train_lang(path_to_dataset,epochs)
+```
+</details>
+
+<details>
+<summary>Prediction </summary>
+
+Inference is done in the following way:
+
+```
+from TLA.Lang_Classify.predict import predict
+
+model = get_model(path_to_weights)
+preds = predict(dataframe_to_be_used,model)
+```
+</details>
+
+
+</details>
+
+
+<details>
+<summary>Analyse</summary>
+
+<details>
+<summary>Training </summary>
+
+Training can be done in the following way:
+
+```
+from TLA.Analyse.train_rf import train_rf
+
+train_rf(path_to_dataset)
+```
+This will store all the vectorizers and models in a seperate directory named
+saved_rf and saved_vec and they are present inside Analysis directory.
+Further instructions for training multiple languages is given in the next section which 
+shows how to run the commands using CLI
+
+</details>
+
+<details>
+<summary>Final Analysis </summary>
+
+Analysis is done in the following way:
+
+```
+from TLA.Analysis.analyse import analyse_data 
+
+analyse_data(path_to_weights)
+```
+
+This will store the final analysis as .csv inside a new directory named
+analysis.
+
+</details>
+
+
+</details>
+
+
+## <div align="center">Overview with Git</div>
+<details> 
+<summary>Installation another method</summary>
+
+```
+git clone https://github.com/tusharsarkar3/TLA.git
+```
+</details>
+<details>
+<summary>Extract data</summary>
+
 Navigate to the required directory
 
 ```
