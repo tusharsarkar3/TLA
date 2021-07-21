@@ -96,7 +96,24 @@ Give the following codes in the lang flag wrt the required language:
  | ---------------- | ---------------- | ---------------- | ---------------- |
  | Romainain | ro  | Russian | ru |
 
+
+
+To load a dataset run the following command in python.
+ 
+```
+df= pd.read_csv("TLA/TLA/Datasets/get_data_en.csv")
+ 
+```
+The command will return a dataframe consisting of the data for the specific language requested.
+ 
+In the phrase get_data_en, en can be sunstituted by the desired language code to load the dataframe for the specific language.
+ 
+ 
+ 
 </details>
+
+
+
 
 <details>
 <summary>Training</summary>
