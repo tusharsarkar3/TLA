@@ -10,6 +10,14 @@ import pickle
 from distutils.sysconfig import get_python_lib
 
 def train_rf(path):
+    """
+    Trains a Random forest classifier to get sentiment for a tweet.
+    
+    Input-> x - A string represent the path of your dataset you want to train.
+    
+    Output -> x - a file with the .pt extention storing the saved wieghts for the training model. 
+    
+    """
     directory = "saved_rf"
     parent_dir = get_python_lib() + "/TLA/Analysis"
     p = os.path.join(parent_dir, directory)
