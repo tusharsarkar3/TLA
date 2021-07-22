@@ -18,6 +18,18 @@ import matplotlib.pyplot as plt
 from distutils.sysconfig import get_python_lib
 
 def train_lang(path,epochs,weights=None):
+    """
+    Trains a Model for the purpose of language classification.
+    
+    Input -> path - A string refereing to the path of your stored dataset.
+          -> epochs - An integer referencing The number of epochs the model needs to be trained for
+          -> wieghts - A string refrencing the path for the wieghts needed to be retrained.
+    
+    Output -> A file with the .pt extention containing stored wieghts after training the model.
+    
+    
+    """
+    
     directory = "models"
     parent_dir = get_python_lib() + "/TLA/Lang_Classify"
     p = os.path.join(parent_dir, directory)
