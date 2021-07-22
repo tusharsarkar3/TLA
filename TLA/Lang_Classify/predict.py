@@ -8,6 +8,17 @@ import pickle
 from distutils.sysconfig import get_python_lib
 
 def predict(val_text,model):
+    
+    """
+    Makes Prediction on the nature of the language used.
+    
+    Input -> val_text - A string you want to get the name of the language used.
+          -> model - A string relating to the path of the wieghts  recieved after training the model.
+          
+    Output -> A string informing about the name of the language used.      
+    
+    """
+    
     try:
         if isinstance(pd.read_csv(val_text),pd.DataFrame) == True:
             val_text = np.array(pd.read_csv(val_text))
