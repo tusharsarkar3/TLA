@@ -7,6 +7,14 @@ from distutils.sysconfig import get_python_lib
 
 
 def store_data(language, process = False):
+    """
+    Cretaes a .csv file for the language specified.
+    Can create processed datasets if process flag is set as True
+    Input-> language - a striing specifying the language you want the tweets in
+            process - A Boolean to specify pre-processing tweets.
+    Output-> x - a dataframe containing extracted data.
+    
+    """
     directory = "datasets"
     parent_dir = get_python_lib() + "/TLA/Data"
     path = os.path.join(parent_dir, directory)
