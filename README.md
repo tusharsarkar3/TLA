@@ -370,6 +370,18 @@ Performance of TLA ( Loss vs epochs)
 }
  ```
 
+ ```
+@misc{640cba8b-35cb-475e-ab04-62d079b74d13,
+  title = {TLA: Twitter Linguistic Analysis},
+  author = {Tushar Sarkar and Nishant Rajadhyaksha},
+   journal = {Software Impacts},
+  doi = {10.24433/CO.6464530.v1}, 
+  howpublished = {\url{https://www.codeocean.com/}},
+  year = 2021,
+  month = {6},
+  version = {v1}
+}
+ ```
 
 ---
  #### Features to be added :
