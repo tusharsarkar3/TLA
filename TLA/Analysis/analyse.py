@@ -5,7 +5,7 @@ def analyse_data():
     """
     Creates .csv files representing results of sentiment analysis carried for the specified dataset.
     Input-> Takes no input
-    Outpu_> .csv files.
+    Output> .csv files.
     """
     analysis_table()
     analysis_table2()
