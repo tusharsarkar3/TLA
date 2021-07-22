@@ -13,6 +13,14 @@ import itertools
 from distutils.sysconfig import get_python_lib
 
 def get_data_for_lang(language):
+    """
+    Extracts Trending data from twitter for a specified language
+    
+    Input-> language - a string which specifies the language the tweets are required in.
+    
+    Output -> x - A dataframe consisiting of data for the language specified. 
+    
+    """
     if language == None:
         lang_list = ['sv', 'th', 'nl', 'ja', 'tr', 'ur', 'id', 'pt', 'fr', 'zh-cn', 'ko', 'hi', 'es', 'fa', 'ro', 'ru',
                      'en']
