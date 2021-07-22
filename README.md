@@ -356,15 +356,25 @@ Performance of TLA ( Loss vs epochs)
  |Urdu| 42 | 69.04 |  30.95 |
  |Chinese| 500 | 80.6 | 19.4 | 
  
+---
+#### Reference:
 
-
-
+ ```
+@misc{sarkar2021tla,
+      title={TLA: Twitter Linguistic Analysis}, 
+      author={Tushar Sarkar and Nishant Rajadhyaksha},
+      year={2021},
+      eprint={2107.09710},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+ ```
 
 
 ---
  #### Features to be added :
-- Access to more languag
-- Creating GUI based system for baetter accesibility
+- Access to more language
+- Creating GUI based system for better accesibility
 - Improving performance of the baseline model
 
 ---
