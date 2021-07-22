@@ -1,4 +1,9 @@
 def mapping():
+    """
+    Defines a mapping for diffrent language codes to the real language.
+    
+    """
+    
     lang_dict={'sv':"Swedish",
                'th':"Thai",
                'nl':"Dutch",
