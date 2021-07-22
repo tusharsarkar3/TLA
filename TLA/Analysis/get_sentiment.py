@@ -6,6 +6,17 @@ from distutils.sysconfig import get_python_lib
 import argparse
 
 def emotion(tweet,lang_code):
+    """
+    Describes the sentiment of a given piece of text
+    
+    Input -> tweet - a string we want the sentiment for.
+    
+          -> lang_code - The language code for the language the string is consisiting of
+          
+    Output -> A string representing either "positive" or "negative" corresponding to the sentiment of the tweet.      
+    
+    """
+    
     try:
         if isinstance(pd.read_csv(tweet),pd.DataFrame) == True:
             tweet = np.array(pd.read_csv(tweet))
